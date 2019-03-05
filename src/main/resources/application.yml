@@ -18,9 +18,24 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    #不加这句会使用myisam引擎
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   http:
     encoding:
       charset: UTF-8
       enabled: true
       force: true
-    
+logging:
+  level:
+    root: info
+    web: info
+    org.springframework.jdbc: DEBUG
+    org.hibernate.jpa: DEBUG
+  file: D:/log/demo/demo-resumebp.log
+  
+  
+  
+  
+  
+  
+  
