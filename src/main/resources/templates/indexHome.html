@@ -7,16 +7,16 @@
 <body>
 	<h1>首页</h1>
 	<div>
-		<a href="@{}">单线程上传</a>
+		<a th:href="@{/index/toSingleThreadUpload}">单线程上传</a>
 	</div>
 	<div>
-		<a>单线程下载</a>
+		<a th:href="@{/index/toSingleThreadDownload}">单线程下载</a>
 	</div>
 	<div>
-		<a>多线程上传</a>
+		<a th:href="@{/index/toMultiThreadUpload}">多线程上传</a>
 	</div>
 	<div>
-		<a>多线程下载</a>
+		<a th:href="@{/index/toMultiThreadDownload}">多线程下载</a>
 	</div>
 </body>
 </html>
