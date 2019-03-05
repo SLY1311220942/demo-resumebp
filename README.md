@@ -2,6 +2,7 @@
 断点续传demo
 
 #主要技术点:
+
 	1.springboot2
 
 	2.jpa+druid
@@ -13,6 +14,7 @@
 	5.多线程
 
 #开发环境
+
 	1.ide => STS
 	
 	2.database => mysql5.7
