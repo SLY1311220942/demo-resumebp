@@ -33,6 +33,8 @@ public class SingleThreadUploadController {
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 			MultipartFile multipartFile = multipartRequest.getFile("file");
 			
+			
+			
 			return null;
 		} catch (Exception e) {
 			LOGGER.error(ExceptionUtils.getStackTrace(e));

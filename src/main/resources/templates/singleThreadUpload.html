@@ -50,6 +50,10 @@
 		</style>
 	</head>
 
+	<script>
+		var webRoot = '[[${#request.getContextPath()}]]';
+	</script>
+
 	<body>
 		<h1>单线程上传</h1>
 		<div>
@@ -84,9 +88,12 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<div>
-				<input type="file" id="uploadfile" name="uploadfile" />
+				<form id="uploadform" enctype="multipart/form-data">
+					<input type="file" id="uploadfile" name="uploadfile" />
+				</form>
+
 				<button onclick="">上传</button>
 			</div>
 
@@ -99,6 +106,20 @@
 
 		function changeProcess(process) {
 			$(".loader-container").css("width", process + "%");
+		}
+
+		function uploadfile() {
+			var formDate = new FormData($("uploadform")[0]);
+
+			$.ajax({
+				type: "post",
+				url: webRoot + "",
+				dataType: 'json',
+				data: formDate,
+				success: function(data) {
+					
+				}
+			});
 		}
 	</script>
 
